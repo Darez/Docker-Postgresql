@@ -1,7 +1,7 @@
 FROM centos:centos5
 MAINTAINER Darez
 
-RUN rpm -i http://yum.postgresql.org/8.2/redhat/rhel-5-x86_64/pgdg-redhat-8.2-6.noarch.rpm
+RUN rpm -i http://yum.postgresql.org/8.1/redhat/rhel-5-x86_64/pgdg-centos-8.1-5.noarch.rpm
 
 RUN yum -y update
 RUN yum clean all
@@ -20,4 +20,4 @@ COPY init.sql /init.sql
 COPY init.sh /init.sh
 RUN sh init.sh
 
-CMD su - postgres -c '/usr/bin/postgres -D /var/lib/pgsql/data' 
+CMD su - postgres -c '/usr/bin/postmaster -D /var/lib/pgsql/data' 
