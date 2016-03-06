@@ -16,7 +16,7 @@ RUN echo "listen_addresses='*'" >> /var/lib/pgsql/data/postgresql.conf
 
 EXPOSE 5432
 
-COPY init.sql /init.sql
-COPY init.sh /init.sh
-RUN sh init.sh
-CMD su - postgres -c '/usr/pgsql-9.5/bin/pg_ctl -D /var/lib/pgsql/data -l logfile start; /bin/bash' 
+COPY run.sh /run.sh
+RUN chmod +x /run.sh
+
+CMD ["/run.sh"]
