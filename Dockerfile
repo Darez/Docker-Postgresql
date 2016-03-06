@@ -1,7 +1,7 @@
 FROM centos:centos5
 MAINTAINER Darez
 
-RUN rpm -i http://yum.postgresql.org/8.1/redhat/rhel-5-x86_64/pgdg-centos-8.1-5.noarch.rpm
+RUN rpm -i http://yum.postgresql.org/8.0/redhat/rhel-5-x86_64/pgdg-centos-8.0-5.noarch.rpm
 
 RUN yum -y update
 RUN yum clean all
