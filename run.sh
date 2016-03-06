@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-su - postgres -c '/usr/pgsql-9.4/bin/postgres -D /var/lib/pgsql/data &'
+su - postgres -c '/usr/pgsql-9.3/bin/postgres -D /var/lib/pgsql/data &'
 sleep 5
 
 if [ ! -f "/started" ]
