@@ -18,10 +18,13 @@ To run the container you can do the following:
 	docker run -d -p <forwarded port>:5432 -i -t pgsql
 
 If u need create user or db, use -e with vars:
+
 	DBNAME='database name'
+
 	DBUSER='username:password'
 
-e.g
+e.g:
+
 	docker run -d -e DBNAME='db_name' -e DBUSER='root:password' -p <forwarded port>:5432 -i -t pgsql
 
 
