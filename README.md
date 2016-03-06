@@ -5,7 +5,7 @@ Dockerfile for postgresql server. Auto create super user 'root' with password 'p
 Getting Started
 ---------------
 
-You can build this container (pgsql 9.4) from Github via
+You can build this container (pgsql last version) from Github via
 
 	docker build -t pgsql github.com/Darez/Docker-Postgresql
 
