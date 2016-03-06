@@ -1,6 +1,5 @@
-# Docker-HTTPD
+Docker-Postgresql
 =================
-
 Dockerfile for postgresql server. Auto create super user 'root' with password 'password'.
 
 Getting Started
